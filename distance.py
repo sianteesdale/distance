@@ -30,3 +30,38 @@ def compute_minimum_distance(points):
                                         points[j])
             distances.append(distance)
     return min(distances)
+
+
+
+"""
+Can also phrase this as:
+    distances = []
+    for point1 in points:
+        for point2 in points:
+            if point1 == point2:
+                continue
+            distance = compute_distance(points1, points2)
+            distances.append(distance)
+    return min(distances)
+    
+"""
+
+"""
+Can also phrase this as:
+    distances = [compute_distance(point1),(point2)
+                    for point1 in points
+                    for point2 in points
+                    if point1 != points2]
+    return min(distances)
+    
+"""
+"""
+Can also phrase this as:
+    distances = []
+    return min(compute_distance(point1, point2)
+                    for point1 in points
+                    for point2 in points
+                    if point1 != points2)
+    
+"""
+            
